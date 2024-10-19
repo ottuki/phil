@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --sand: #CBE6E6;    
+    --ocean: #0077B6;   
+    --sun: #00A6A6;    
+    --sky: #ADE8F4;    
+    --black: #000000; 
+    --white: #FFFFFF;   
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--sky);
+    color: var(--white);
+}
+
+header {
+    background-color: var(--ocean);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    position: relative;
+}
+
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 4px 0;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: max-height 0.3s ease;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: var(--white);  
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--sun);   
+}
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--ocean);
+        padding: 20px;
+        border-radius: 8px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+   
+    #menu-toggle:checked + label + nav .navbar {
+        max-height: 500px; 
+    }
+}
+
+
+header h1 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+#welcome {
+    background-color: var(--sand);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#welcome h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: var(--black);
+}
+
+#welcome p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--sun);
+    color: var(--black);  
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #008080; 
+}
+
+footer {
+    background-color: var(--ocean);
+    color: var(--sand);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
